@@ -1,24 +1,11 @@
-var fs = require('fs'),
-    q = require('q');
+var fs = require('fs');
 
 var propertyStore = {},
-    environment = process.env.NODE_ENV ? process.env.NODE_ENV.trim().toLowercase() : 'development';
+    environment = process.env.NODE_ENV ? process.env.NODE_ENV.toLowerCase().trim() : 'development';
 
-function openPropertiesFile(filename) {
-
-	if(!filename) {
-		filename = 'environment.properties';
-	}
-	var deferred = q.defer();
-	fs.readFile(filename, 'utf-8', function(err, file) {
-		if(err) {
-			console.error('Property file "' + filename + '" was not found. ');
-			deferred.reject(new Error(err));
-			return;
-		}
-		deferred.resolve(file);
-	});
-	return deferred.promise;
+function load(filename) {
+	var rawData = fs.readFileSync(filename, 'utf-8');
+    parseProperties(rawData);
 }
 
 function parseProperties(rawData) {
@@ -46,10 +33,8 @@ function parseProperties(rawData) {
     });
 }
 
-module.exports = function(fileName) {
-    openPropertiesFile(fileName)
-        .then(parseProperties)
-        .catch(console.error);
+module.exports = function(filename) {
+    load(filename);
 
     return {
         get: function(key) {
