@@ -13,7 +13,5 @@
   ],
   "author": "selbekk <selbeezy@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "q": "^1.4.1"
-  }
+  "dependencies": {}
 }
