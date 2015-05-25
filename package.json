@@ -12,5 +12,8 @@
     "environment"
   ],
   "author": "selbekk <selbeezy@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "q": "^1.4.1"
+  }
 }
