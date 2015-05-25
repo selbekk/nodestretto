@@ -1,0 +1,16 @@
+{
+  "name": "nodestretto",
+  "version": "1.0.0",
+  "description": "A node-version of the popular Java properties library Constretto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "properties",
+    "options",
+    "environment"
+  ],
+  "author": "selbekk <selbeezy@gmail.com>",
+  "license": "ISC"
+}
