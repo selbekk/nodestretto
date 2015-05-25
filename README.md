@@ -6,6 +6,10 @@ Based loosely around the Java-library [Constretto](http://constretto.github.io),
 differentiate your configuration for different environments. Do you have different databases in your 
 staging and production environments, perhaps? Then this is for you.
 
+Want to get started? 
+
+	npm install nodestretto --save
+
 ## Usage
 
 The library looks at the ``NODE_ENV`` environment variable in order to decide which property to return.
