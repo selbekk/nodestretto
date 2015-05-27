@@ -1,6 +1,6 @@
 {
   "name": "nodestretto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Meet a properties module that cares about the environment",
   "main": "index.js",
   "keywords": [
