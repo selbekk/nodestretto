@@ -5,14 +5,14 @@ var propertyStore = {},
 
 function load(filename) {
 	var rawData = fs.readFileSync(filename, 'utf-8');
-    parseProperties(rawData);
+    parse(rawData);
 }
 
-function parseProperties(rawData) {
+function parse(rawData) {
     var lines = rawData.split('\n');
     lines.forEach(function(line, index) {
         line = line.trim();
-        if(line.length === 0 || line.indexOf('#') > -1) {
+        if(line.length === 0 || line.indexOf('#') === 0) {
             return; // Skip empty lines and comments
         }
 
@@ -43,12 +43,7 @@ module.exports = function(filename) {
                 throw new Error('Property "' + key + '" was not found.');
             }
 
-            if(!property[environment]) {
-                return property.default;
-            }
-
-            return property[environment];
-
+            return property[environment] ? property[environment] : property.default;
         },
         getAsNumber: function(key) {
             return parseFloat(this.get(key));
