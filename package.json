@@ -1,16 +1,18 @@
 {
   "name": "nodestretto",
   "version": "1.0.0",
-  "description": "A node-version of the popular Java properties library Constretto",
+  "description": "Meet a properties module that cares about the environment",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "properties",
     "options",
-    "environment"
+    "environment",
+    "constretto",
+    "property",
+    "env",
+    "pyah"
   ],
+  "repository": "https://github.com/selbekk/nodestretto",
   "author": "selbekk <selbeezy@gmail.com>",
   "license": "ISC",
   "dependencies": {}
