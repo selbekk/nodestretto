@@ -1,4 +1,5 @@
 # Nodestretto
+[![npm version](https://badge.fury.io/js/nodestretto.svg)](http://badge.fury.io/js/nodestretto)
 
 Meet a properties module that cares about the environment.
 
